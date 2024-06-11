@@ -51,7 +51,7 @@ def generate_exam(questions, total_num_questions, num_variants, fixed_question_f
         doc.preamble.append(NoEscape(r'\preauthor{\vspace{0.5cm}\begin{center}\LARGE}'))
         doc.preamble.append(NoEscape(r'\postauthor{\end{center}\vspace{0.5cm}}'))
         doc.preamble.append(NoEscape(r'\titleformat{\section}{\large\bfseries}{}{0pt}{}'))
-        doc.preamble.append(NoEscape(r'\titleformat{\subsection}{\large\bfseries}{}{0pt}{}'))
+        doc.preamble.append(NoEscape(r'\titleformat{\subsection}{\large\fontsize{16}{18}\sffamily\bfseries}{}{0pt}{}'))
         doc.preamble.append(NoEscape(r'\titleformat{\subsubsection}{\large\bfseries}{}{0pt}{}'))
         doc.preamble.append(NoEscape(r'\pagenumbering{gobble}'))  # Suppress page number on the first page
 
@@ -124,7 +124,7 @@ generate_exam(
     total_num_questions=3,                                                           #adjust the total number of questions for the exam  
     num_variants=5,                                                                  #adjust the number of variants for the exam
     fixed_question_files=fixed_questions, 
-    output_directory="/home/mot/code/random_exam/producedExams",                 #adjust the output directory for the produced exams
+    output_directory="/home/mot/code/random_exam/producedExams",                     #adjust the output directory for the produced exams
     preamble="Examination of the Lecture",                                           #title preamble    
     lecture_number="VO 724650",                                                      #lecture number
     title="Advanced Quantum Chemistry",                                              #lecture title
